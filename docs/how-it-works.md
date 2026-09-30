@@ -44,6 +44,7 @@ All skills and their invocation commands. Invoke any skill in your AI tool's cha
 | context-anchoring | `/context-anchoring` | Per-feature living documents that capture decisions and reasoning across sessions |
 | collaborative-judgment | `/collaborative-judgment` | Surfaces genuine judgment calls or missing/conflicting knowledge instead of silently assuming |
 | learning-harvest | `/learning-harvest` | Manages operational learnings lifecycle — load prior patterns, harvest new experiential insights, keep the document tight |
+| lattice-store | `/lattice-store` | Resolves where living documents (context docs, learnings, review log, requirements) are read and written — session value, derived from an out-of-repo requirement doc, config, or default |
 | requirement-quality | `/requirement-quality` | Feature specification quality — completeness, scenario structure, AC verifiability, independence, and implementation slice quality |
 
 ### Molecules — invoke to run a full workflow
@@ -93,6 +94,7 @@ Not every atom applies to every piece of code. The distinction matters for both 
 - **architecture** -- Defaults to clean architecture (layers, dependency direction) but supports any architectural style you document. Structural rules apply universally.
 - **knowledge-priming** -- Project context (tech stack, architecture, conventions) is always relevant. Without it, the AI defaults to generic assumptions.
 - **learning-harvest** -- Operational learnings from past sessions inform current work; new experiential patterns are proposed for user curation at session end.
+- **lattice-store** -- Any read or write of a living document resolves its location first, so every skill agrees on where context, learnings, reviews, and requirements live.
 - **collaborative-judgment** -- Genuine judgment calls and under-grounded uncertainty should be surfaced, not silently resolved. Composed by molecules alongside other atoms.
 
 **Conditionally apply:**
